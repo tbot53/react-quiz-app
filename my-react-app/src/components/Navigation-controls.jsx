@@ -12,7 +12,7 @@ export default function Navigation(props) {
   
   
   return (
-    <div className="w-[80vw] mx-auto text-2xl mt-4 flex justify-between items-center">
+    <div className="w-[80vw] mx-auto text-sm md:text-2xl mt-4 flex justify-between items-center">
       <button
         onClick={props.previous}
         disabled={props.prevDisability}
