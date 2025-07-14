@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Navigation(props) {
-  const baseClass = "h-6 w-fit rounded-lg px-4 py-6 flex items-center text-center";
+  const baseClass = "h-fit w-fit rounded-lg p-4 flex items-center text-center";
 
   const getBtnClass = (isDisabled) => {
     const bgColor = isDisabled ? "bg-blue-200" : "bg-blue-500 hover:bg-blue-600";
@@ -12,7 +12,7 @@ export default function Navigation(props) {
   
   
   return (
-    <div className="w-[80vw] mx-auto text-2xl mt-4 flex justify-between">
+    <div className="w-[80vw] mx-auto text-2xl mt-4 flex justify-between items-center">
       <button
         onClick={props.previous}
         disabled={props.prevDisability}
