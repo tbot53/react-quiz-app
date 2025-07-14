@@ -4,6 +4,8 @@ import Navigation from "./components/Navigation-controls";
 import Submit from "./components/Submit-Panel";
 import questionsData from "./Question-data";
 import React from 'react'
+import { useWindowSize } from 'react-use'
+import Confetti from 'react-confetti'
 
 
 export default function App() {
@@ -67,6 +69,8 @@ export default function App() {
     setCreateQuiz(true); 
   }
 
+  const { width, height } = useWindowSize()
+
   return (
     <>
       <Header
@@ -90,7 +94,17 @@ export default function App() {
           submit={calculateScore}
         />
 
-      </div>) : (<Submit score ={yourScore} quizLength={randomQuestions.length}/>)}
+      </div>) : (
+        <>
+          <Submit score ={yourScore} quizLength={randomQuestions.length}/>
+          <Confetti width={width} height={height}/>
+
+        </>
+        
+        
+        
+        
+        )}
       
       
     </>
